@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navgraph.xml"
+    app:startDestination="@id/mainActivity">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="sh.siava.aospmods_revamp.MainActivity"
+        android:label="MainActivity" />
+    <fragment
+        android:id="@+id/lockScreenFragment"
+        android:name="sh.siava.aospmods_revamp.LockScreenFragment"
+        android:label="LockScreenFragment" />
+    <fragment
+        android:id="@+id/AOSPModsSettingsFragment"
+        android:name="sh.siava.aospmods_revamp.AOSPModsSettingsFragment"
+        android:label="AOSPModsSettingsFragment" />
+    <fragment
+        android:id="@+id/statusbarFragment"
+        android:name="sh.siava.aospmods_revamp.StatusbarFragment"
+        android:label="StatusbarFragment" />
+    <fragment
+        android:id="@+id/statusbarBatteryBarFragment"
+        android:name="sh.siava.aospmods_revamp.StatusbarBatteryBarFragment"
+        android:label="StatusbarBatteryBarFragment" />
+    <fragment
+        android:id="@+id/statusbarBatteryIconFragment"
+        android:name="sh.siava.aospmods_revamp.StatusbarBatteryIconFragment"
+        android:label="StatusbarBatteryIconFragment" />
+    <fragment
+        android:id="@+id/statusbarClockFragment"
+        android:name="sh.siava.aospmods_revamp.StatusbarClockFragment"
+        android:label="StatusbarClockFragment" />
+    <fragment
+        android:id="@+id/statusbarNetworkMonitorFragment"
+        android:name="sh.siava.aospmods_revamp.StatusbarNetMonFragment"
+        android:label="StatusbarNetworkMonitorFragment" />
+    <fragment
+        android:id="@+id/navigationBarFragment"
+        android:name="sh.siava.aospmods_revamp.NavigationBarFragment"
+        android:label="NavigationBarFragment" />
+    <fragment
+        android:id="@+id/navigationBarGestureFragment"
+        android:name="sh.siava.aospmods_revamp.NavigationBarGestureFragment"
+        android:label="NavigationBarGestureFragment" />
+    <fragment
+        android:id="@+id/navigationBar3BNavFragment"
+        android:name="sh.siava.aospmods_revamp.NavigationBar3BNavFragment"
+        android:label="NavigationBar3BNavFragment" />
+    <fragment
+        android:id="@+id/miscellaneousFragment"
+        android:name="sh.siava.aospmods_revamp.MiscellaneousFragment"
+        android:label="MiscellaneousFragment" />
+    <fragment
+        android:id="@+id/miscellaneousNetStatFragment"
+        android:name="sh.siava.aospmods_revamp.MiscellaneousNetStatFragment"
+        android:label="MiscellaneousNetStatFragment" />
+    <fragment
+        android:id="@+id/quickSettingsPanel"
+        android:name="sh.siava.aospmods_revamp.QuickSettingsPanel"
+        android:label="QuickSettingsPanel" />
+    <fragment
+        android:id="@+id/quickSettingsNetMonPanel"
+        android:name="sh.siava.aospmods_revamp.QuickSettingsNetMonPanel"
+        android:label="QuickSettingsNetMonPanel" />
+</navigation>
