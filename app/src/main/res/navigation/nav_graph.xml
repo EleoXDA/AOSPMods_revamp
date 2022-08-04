@@ -1,67 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/navgraph.xml"
-    app:startDestination="@id/mainActivity">
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/startScreen">
 
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="sh.siava.aospmods_revamp.MainActivity"
-        android:label="MainActivity" />
     <fragment
         android:id="@+id/lockScreenFragment"
         android:name="sh.siava.aospmods_revamp.LockScreenFragment"
-        android:label="LockScreenFragment" />
+        android:label="LockScreenFragment" >
+        <action
+            android:id="@+id/action_lockScreenFragment_to_startScreen"
+            app:destination="@id/startScreen" />
+    </fragment>
     <fragment
         android:id="@+id/AOSPModsSettingsFragment"
         android:name="sh.siava.aospmods_revamp.AOSPModsSettingsFragment"
-        android:label="AOSPModsSettingsFragment" />
+        android:label="AOSPModsSettingsFragment" >
+        <action
+            android:id="@+id/action_AOSPModsSettingsFragment_to_startScreen"
+            app:destination="@id/startScreen" />
+    </fragment>
     <fragment
         android:id="@+id/statusbarFragment"
         android:name="sh.siava.aospmods_revamp.StatusbarFragment"
-        android:label="StatusbarFragment" />
+        android:label="StatusbarFragment" >
+        <action
+            android:id="@+id/action_statusbarFragment_to_startScreen"
+            app:destination="@id/startScreen" />
+        <action
+            android:id="@+id/action_statusbarFragment_to_statusbarNetworkMonitorFragment"
+            app:destination="@id/statusbarNetworkMonitorFragment" />
+        <action
+            android:id="@+id/action_statusbarFragment_to_statusbarBatteryBarFragment"
+            app:destination="@id/statusbarBatteryBarFragment" />
+        <action
+            android:id="@+id/action_statusbarFragment_to_statusbarBatteryIconFragment"
+            app:destination="@id/statusbarBatteryIconFragment" />
+        <action
+            android:id="@+id/action_statusbarFragment_to_statusbarClockFragment"
+            app:destination="@id/statusbarClockFragment" />
+    </fragment>
     <fragment
         android:id="@+id/statusbarBatteryBarFragment"
         android:name="sh.siava.aospmods_revamp.StatusbarBatteryBarFragment"
-        android:label="StatusbarBatteryBarFragment" />
+        android:label="StatusbarBatteryBarFragment" >
+        <action
+            android:id="@+id/action_statusbarBatteryBarFragment_to_statusbarFragment"
+            app:destination="@id/statusbarFragment" />
+    </fragment>
     <fragment
         android:id="@+id/statusbarBatteryIconFragment"
         android:name="sh.siava.aospmods_revamp.StatusbarBatteryIconFragment"
-        android:label="StatusbarBatteryIconFragment" />
+        android:label="StatusbarBatteryIconFragment" >
+        <action
+            android:id="@+id/action_statusbarBatteryIconFragment_to_statusbarFragment"
+            app:destination="@id/statusbarFragment" />
+    </fragment>
     <fragment
         android:id="@+id/statusbarClockFragment"
         android:name="sh.siava.aospmods_revamp.StatusbarClockFragment"
-        android:label="StatusbarClockFragment" />
+        android:label="StatusbarClockFragment" >
+        <action
+            android:id="@+id/action_statusbarClockFragment_to_statusbarFragment"
+            app:destination="@id/statusbarFragment" />
+    </fragment>
     <fragment
         android:id="@+id/statusbarNetworkMonitorFragment"
         android:name="sh.siava.aospmods_revamp.StatusbarNetMonFragment"
-        android:label="StatusbarNetworkMonitorFragment" />
+        android:label="StatusbarNetworkMonitorFragment" >
+        <action
+            android:id="@+id/action_statusbarNetworkMonitorFragment_to_statusbarFragment"
+            app:destination="@id/statusbarFragment" />
+    </fragment>
     <fragment
         android:id="@+id/navigationBarFragment"
         android:name="sh.siava.aospmods_revamp.NavigationBarFragment"
-        android:label="NavigationBarFragment" />
+        android:label="NavigationBarFragment" >
+        <action
+            android:id="@+id/action_navigationBarFragment_to_startScreen"
+            app:destination="@id/startScreen" />
+        <action
+            android:id="@+id/action_navigationBarFragment_to_navigationBarGestureFragment"
+            app:destination="@id/navigationBarGestureFragment" />
+        <action
+            android:id="@+id/action_navigationBarFragment_to_navigationBar3BNavFragment"
+            app:destination="@id/navigationBar3BNavFragment" />
+    </fragment>
     <fragment
         android:id="@+id/navigationBarGestureFragment"
         android:name="sh.siava.aospmods_revamp.NavigationBarGestureFragment"
-        android:label="NavigationBarGestureFragment" />
+        android:label="NavigationBarGestureFragment" >
+        <action
+            android:id="@+id/action_navigationBarGestureFragment_to_navigationBarFragment"
+            app:destination="@id/navigationBarFragment" />
+    </fragment>
     <fragment
         android:id="@+id/navigationBar3BNavFragment"
         android:name="sh.siava.aospmods_revamp.NavigationBar3BNavFragment"
-        android:label="NavigationBar3BNavFragment" />
+        android:label="NavigationBar3BNavFragment" >
+        <action
+            android:id="@+id/action_navigationBar3BNavFragment_to_navigationBarFragment"
+            app:destination="@id/navigationBarFragment" />
+    </fragment>
     <fragment
         android:id="@+id/miscellaneousFragment"
         android:name="sh.siava.aospmods_revamp.MiscellaneousFragment"
-        android:label="MiscellaneousFragment" />
+        android:label="MiscellaneousFragment" >
+        <action
+            android:id="@+id/action_miscellaneousFragment_to_miscellaneousNetStatFragment"
+            app:destination="@id/miscellaneousNetStatFragment" />
+        <action
+            android:id="@+id/action_miscellaneousFragment_to_startScreen"
+            app:destination="@id/startScreen" />
+    </fragment>
     <fragment
         android:id="@+id/miscellaneousNetStatFragment"
         android:name="sh.siava.aospmods_revamp.MiscellaneousNetStatFragment"
-        android:label="MiscellaneousNetStatFragment" />
+        android:label="MiscellaneousNetStatFragment" >
+        <action
+            android:id="@+id/action_miscellaneousNetStatFragment_to_miscellaneousFragment"
+            app:destination="@id/miscellaneousFragment" />
+    </fragment>
     <fragment
         android:id="@+id/quickSettingsPanel"
         android:name="sh.siava.aospmods_revamp.QuickSettingsPanel"
-        android:label="QuickSettingsPanel" />
+        android:label="QuickSettingsPanel" >
+        <action
+            android:id="@+id/action_quickSettingsPanel_to_quickSettingsNetMonPanel"
+            app:destination="@id/quickSettingsNetMonPanel" />
+    </fragment>
     <fragment
         android:id="@+id/quickSettingsNetMonPanel"
         android:name="sh.siava.aospmods_revamp.QuickSettingsNetMonPanel"
-        android:label="QuickSettingsNetMonPanel" />
+        android:label="QuickSettingsNetMonPanel" >
+        <action
+            android:id="@+id/action_quickSettingsNetMonPanel_to_quickSettingsPanel"
+            app:destination="@id/quickSettingsPanel" />
+    </fragment>
+    <fragment
+        android:id="@+id/startScreen"
+        android:name="sh.siava.aospmods_revamp.StartScreenFragment"
+        android:label="StartScreen" >
+        <action
+            android:id="@+id/action_startScreen_to_navigationBarFragment"
+            app:destination="@id/navigationBarFragment" />
+        <action
+            android:id="@+id/action_startScreen_to_AOSPModsSettingsFragment"
+            app:destination="@id/AOSPModsSettingsFragment" />
+        <action
+            android:id="@+id/action_startScreen_to_miscellaneousFragment"
+            app:destination="@id/miscellaneousFragment" />
+        <action
+            android:id="@+id/action_startScreen_to_lockScreenFragment"
+            app:destination="@id/lockScreenFragment" />
+        <action
+            android:id="@+id/action_startScreen_to_quickSettingsPanel"
+            app:destination="@id/quickSettingsPanel" />
+        <action
+            android:id="@+id/action_startScreen_to_statusbarFragment"
+            app:destination="@id/statusbarFragment" />
+    </fragment>
 </navigation>
